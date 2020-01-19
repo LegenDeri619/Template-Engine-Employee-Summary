@@ -1,18 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Engineer Template</title>
+    <title>Team Generator</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/028a09fec6.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="assets/css/style.css">    
+        
+    <style>
+    body {
+        margin: 20px;
+    }
+    .header {
+        background-color: lightskyblue;
+        border: solid black;
+        text-align: center;
+        font-size: 30px;;  
+    }
+    .container-body {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .card {
+        background-color:whitesmoke;
+        margin-top: 4%;
+        border: solid black;
+        font-size: x-large;
+        border-radius: 10%;
+    }
+    .card-header{
+        margin: 10%;
+    }
+    .card-body{
+        margin: 5%;
+    }
+    ul{
+        list-style: none;
+    }
+    </style>
+
 </head>
 
 <body>
+    <div class=header>
+        <h1>My Team</h1>
+    </div>
 
+    <div class="container-body">
+        ${teamString} 
+    </div>
 
+        <div class="card">
+            <div class="card-header">
+            <h2>${arr.name}</h2>  
+            <h2><i class="far fa-user"></i> ${arr.title}</h2>
+            <hr>
+        </div>
+            <div class="card-body">
+                <ul>
+                    <li>ID: ${arr.id}</li>
+                    <li>Email: ${arr.email}</li>
+                    <li>${roleInfo} </li>
+                </ul>
+            </div>
+        </div>
+
+        <script src="https://kit.fontawesome.com/028a09fec6.js" crossorigin="anonymous"></script>        
 </body>
+
 </html>
